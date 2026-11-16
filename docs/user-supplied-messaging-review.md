@@ -1,0 +1,13 @@
+# Review of the user-supplied messaging update
+
+The attached `pasted_content_3.txt` reports a Lovable change that added a same-browser messaging surface. It describes `BroadcastChannel` delivery between tabs, Ed25519-signed message envelopes, signed acknowledgements, CID fingerprints, tamper detection, local IndexedDB storage, retry-now/cancel controls, and exponential HTTP retry backoff from 30 seconds to a 10-minute cap for at most 20 attempts. The attached test excerpt checks identity matching, reply references, CID tampering, a 4,096-character body limit, acknowledgement binding, and the backoff formula.
+
+The attachment reports 55 regression tests passing in the separate Lovable workspace. It says local tab delivery and controlled/simulated peer responses were checked. It explicitly says no operator-hosted remote listener was supplied or contacted, so real remote-peer delivery remains unverified. The attachment is source material provided by the owner; Truth-Talk has not imported the Lovable code or independently reproduced those test results.
+
+Only the requested messaging behavior is in scope for Truth-Talk. The attachment also contains unrelated Terminus routes, cMAP pages, auth/checkout changes, preview-auth broker code, and project metadata; none of those files, routes, keys, servers, databases, identities, or dependencies are imported. Truth-Talk retains its independent React/Vite codebase, its no-live-VALKYRIE boundary, and its existing browser-local state. The NIP-07 Nostr signing key remains controlled by the browser extension and is never persisted by Truth-Talk. If a distinct local messenger signing identity is implemented, it is a separate, clearly labelled browser-local key and cannot be used for Nostr or any node identity.
+
+The owner subsequently said that they had used five Lovable credits on their own changes and would receive more in 23 hours, adding: “we'll do the peer verification ourselves.” This is owner-reported. The assistant did not spend Lovable credits, connect to a Lovable account, send a remote peer message, or conduct a peer verification. Remote peer testing remains explicitly deferred to the owner; no automated remote peer traffic is initiated by this task.
+
+## Implementation boundary
+
+Preserve the verified local-tab behavior and the retry/backoff arithmetic as local code only. Do not enable HTTP peer delivery in the first Truth-Talk release. A future remote transport would require an operator-supplied, versioned peer contract, exact endpoint review, a separately approved destination, and a user-visible per-message send confirmation. No peer address is preconfigured. No VALKYRIE URL is a messaging endpoint.

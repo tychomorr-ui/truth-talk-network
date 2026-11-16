@@ -1,0 +1,93 @@
+export const fourReelsBrand = {
+  name: "4Reels",
+  status: "STRATEGY DRAFT — no campaign is running",
+  primaryTagline: "Show the work. Keep the receipt.",
+  supportingLine: "The feed for claims with context.",
+  positioning: "Short-form work with signed context and checkable file hashes—without pretending a signature proves truth or real-world identity.",
+  niche: "Evidence-attached build-in-public for people making something they can show.",
+  audience: "Independent makers, creators, researchers, educators, and community builders who want context and traceability—not another popularity-ranked video feed. This is a behavior-based wedge, not an income-based limit; the long-term audience can be anyone with work worth contextualizing.",
+  secondaryAudience: "Potential collaborators, reviewers, funders, and communities looking for attributable work-in-progress. Attention, funding, and partnership are not promised outcomes.",
+  differentiator: "A short post can carry a key-signed event, a digest for the exact referenced bytes, sources, and reasoned branches. These signals make parts of a post inspectable; they do not prove the claim, the author's civil identity, or ownership.",
+  taglines: [
+    "Show the work. Keep the receipt.",
+    "A short reel. A longer trail.",
+    "Built to be cited, not just scrolled.",
+    "Make it. Mark it. Trace it.",
+    "Less ‘trust me.’ More ‘check the record.’",
+    "Your work, with its source trail.",
+    "A reel with context.",
+    "Create the clip. Keep the receipt.",
+  ],
+  voiceRules: [
+    "Name what was signed and what bytes were hashed; never call a person ‘verified’ based only on a Nostr key.",
+    "State uncertainty in plain language. ‘The bytes match this digest’ is better than ‘the content is verified.’",
+    "Invite review and reasoned disagreement; do not promise virality, funding, legal protection, or universal removal.",
+  ],
+  callsToAction: ["Open the source", "Check the file", "Branch with a reason"],
+  pillars: [
+    {
+      name: "Show the build",
+      purpose: "Explain one concrete change and connect it to an artifact the creator is allowed to share.",
+      format: "A brief process reel or screen recording, with a source note and the exact file digest when available.",
+    },
+    {
+      name: "Behind the byte",
+      purpose: "Teach what a hash, signature, receipt, or provenance reference can—and cannot—establish.",
+      format: "One concept, one real artifact, one explicit limitation. Never use a fabricated test result as a public example.",
+    },
+    {
+      name: "Claim → source → branch",
+      purpose: "Make a bounded claim reviewable and invite an evidence-based extension or dissent.",
+      format: "One claim, one source, one uncertainty, and an optional reasoned branch to an existing signed event.",
+    },
+    {
+      name: "Maker notes",
+      purpose: "Center the person's process and choices without implying identity proof or endorsement.",
+      format: "A consented first-person note that explains context, provenance, and what remains unverified.",
+    },
+  ],
+  episodeOutline: [
+    { beat: "Hook", guide: "Open with the question or change—not an unsupported superlative." },
+    { beat: "One claim", guide: "State one bounded, first-person claim in plain language." },
+    { beat: "Evidence", guide: "Show one artifact or source; say whether the digest covers an original or derivative." },
+    { beat: "Limit", guide: "Name what the signature, source, or hash does not establish." },
+    { beat: "Next step", guide: "Invite a source check or a branch with a reason; keep posting voluntary." },
+  ],
+  templates: [
+    "BUILD NOTE — [what changed] / [artifact or source] / [what is still uncertain]",
+    "BYTE NOTE — [which exact file] / SHA-256: [digest] / [what matching bytes do and do not prove]",
+    "SOURCE TRAIL — [one bounded claim] / [dated source] / [one open question]",
+    "BRANCH INVITATION — [event ID] / [extend, dispute, cite, or derive] / [why a response may help]",
+  ],
+  rollout: [
+    {
+      phase: "01 · Preflight",
+      status: "Required gates; not complete",
+      detail: "Complete name-clearance review, applicable site/content terms and privacy information, a genuine complaint/takedown contact, and clear relay/media disclosures. Review the public-post consent, reporting, and deletion limitations.",
+    },
+    {
+      phase: "02 · Listening pilot",
+      status: "Recommendation; not scheduled",
+      detail: "Invite a small, opt-in group of makers for interviews and usability feedback. A suggested range is 5–10 conversations; these are not existing partners or an achieved cohort. Publish only with each author's exact consent.",
+    },
+    {
+      phase: "03 · Public pilot",
+      status: "Recommendation; no campaign is running",
+      detail: "If preflight is satisfied, introduce the four editorial pillars and publish manually at a modest proposed cadence, such as three evidence-led posts per week. Every post is a separate authored action; this app does not schedule or post automatically.",
+    },
+    {
+      phase: "04 · Review",
+      status: "Future decision",
+      detail: "Use consented feedback and actual relay/media outcomes to revise the product. Do not treat views, follower counts, or network-wide totals as truth, quality, or proof of impact.",
+    },
+  ],
+  signals: [
+    "Whether voluntarily shared posts include a source or a digest of the exact referenced bytes.",
+    "Local media checks reported as match, mismatch, or unverifiable—never collapsing failures into mismatches.",
+    "Reasoned branches and follow-through, counted only within the relays a person chose to inspect.",
+    "Complaint handling outcomes and time, if the owner establishes a real contact and approved process.",
+  ],
+  measurementBoundary: "No baseline or campaign data exists. These are candidate measures only. Do not show invented counters or collect aggregate analytics without a separate privacy review and explicit approval.",
+  nameCaveat: "4Reels is the owner's preferred working name, not a cleared mark. Dated research notes that Meta lists ‘Reels’ as a platform/service mark and that the USPTO search UI did not return inspectable exact-term records. This is not a legal conclusion. Obtain broader clearance advice before public brand launch; use no competitor marks or affiliation language.",
+  productBoundary: "4Reels is a feature inside the standalone TruthTalk product. It does not connect live to VALKYRIE. Any future VALKYRIE exchange requires a versioned, operator-approved signed export/import contract.",
+} as const;
